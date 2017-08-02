@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "name": "JIRA PR Autofill",
+  "permissions": [
+    "declarativeContent",
+    "https://github.com/ConnectedHomes/hivewebshop*/compare/*",
+    "https://jira.bgchtest.info/browse/*"
+  ],
+  "version": "0.1",
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "page_action": {}
+}
