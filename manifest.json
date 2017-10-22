@@ -3,10 +3,10 @@
   "name": "JIRA PR Autofill",
   "permissions": [
     "declarativeContent",
-    "https://github.com/ConnectedHomes/hivewebshop*/compare/*",
+    "https://github.com/ConnectedHomes/hivewebshop/compare/*",
     "https://jira.bgchtest.info/browse/*"
   ],
-  "version": "0.1",
+  "version": "0.2",
   "icons": {
     "16": "icon16.png",
     "48": "icon48.png",
@@ -16,5 +16,25 @@
     "scripts": ["background.js"],
     "persistent": false
   },
-  "page_action": {}
+  "content_scripts": [
+    {
+      "matches": ["https://github.com/ConnectedHomes/hivewebshop/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "page_action": {},
+  "commands": {
+    "all": {
+      "suggested_key": {
+        "default": "Alt+A"
+      },
+      "description": "Autofill title and description"
+    },
+    "link": {
+      "suggested_key": {
+        "default": "Alt+L"
+      },
+      "description": "Autofill description"
+    }
+  }
 }

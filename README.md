@@ -7,7 +7,9 @@ This Chrome extension autofills the PR title with the title of the JIRA card and
 - Select the folder containing the extension.
 
 ## Usage
-Just click the JIRA icon in the toolbar.
+Just click the JIRA icon in the toolbar or use the following keyboard shortcuts:
+- Alt+A - Autofill title and description
+- Alt+L - Autofill description
 
 It works only if the name of the branch starts with the ID of the card (e. g., `HWS-2694-broken-fr-pages`).
 
