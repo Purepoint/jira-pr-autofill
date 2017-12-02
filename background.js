@@ -4,7 +4,7 @@ chrome.runtime.onInstalled.addListener(function() {
       {
         conditions: [
           new chrome.declarativeContent.PageStateMatcher({
-            pageUrl: { urlMatches: 'https://github.com/ConnectedHomes/hivewebshop/compare/*' }
+            pageUrl: { urlMatches: 'https://github.com/*' }
           })
         ],
         actions: [ new chrome.declarativeContent.ShowPageAction() ]
