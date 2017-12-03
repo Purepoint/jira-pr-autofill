@@ -1,4 +1,9 @@
-chrome.runtime.onInstalled.addListener(function() {
+chrome.runtime.onInstalled.addListener(function(details) {
+  if (details.reason === 'install' ||
+      details.reason === 'update' && chrome.runtime.getManifest().version === '0.3') {
+    chrome.tabs.create({ url: chrome.extension.getURL('options.html') });
+  }
+
   chrome.declarativeContent.onPageChanged.removeRules(undefined, function() {
     chrome.declarativeContent.onPageChanged.addRules([
       {
