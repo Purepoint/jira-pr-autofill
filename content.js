@@ -28,7 +28,7 @@ chrome.runtime.onMessage.addListener(function(message) {
         const replaceRegex = new RegExp(`^\\[(${cardIdRegexPattern})\\]`);
         const title = /(.*) - .*$/.exec(response
                                           .getElementsByTagName('title')[0]
-                                          .innerHTML
+                                          .textContent
                                           .replace(replaceRegex, '$1')
                                         )[1];
 
