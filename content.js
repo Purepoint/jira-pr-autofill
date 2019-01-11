@@ -10,6 +10,11 @@ chrome.runtime.onMessage.addListener(function(message) {
     return;
   }
 
+  if (message.mode === 'qa') {
+    titleField.value = `${titleField.value} - QA`;
+    return;
+  }
+
   const branch = document
                    .getElementsByClassName('branch')[1]
                    .getElementsByClassName('css-truncate-target')[0]

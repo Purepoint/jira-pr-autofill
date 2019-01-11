@@ -6,7 +6,7 @@
     "storage",
     "<all_urls>"
   ],
-  "version": "0.4",
+  "version": "0.5",
   "icons": {
     "16": "icon16.png",
     "48": "icon48.png",
@@ -36,6 +36,12 @@
         "default": "Alt+L"
       },
       "description": "Autofill description"
+    },
+    "qa": {
+      "suggested_key": {
+        "default": "Alt+Q"
+      },
+      "description": "Add QA suffix"
     },
     "wip": {
       "suggested_key": {
