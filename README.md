@@ -13,6 +13,6 @@ This Chrome extension autofills the PR title with the ID and the title of the JI
 Click the JIRA icon in the toolbar to autofill title and description or use the following keyboard shortcuts:
 - Alt+A - Autofill title and description
 - Alt+L - Autofill description
-- Alt+W - Add [WIP] prefix to title
+- Alt+Q - Add QA suffix to title
 
 It works only if you are logged in to JIRA, the name of the branch starts with the ID of the card (e. g., `HWS-2694-broken-fr-pages`), the card exists and you have permission to access it.

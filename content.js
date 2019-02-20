@@ -5,11 +5,6 @@ chrome.runtime.onMessage.addListener(function(message) {
   }
 
   const titleField = document.getElementById('pull_request_title');
-  if (message.mode === 'wip') {
-    titleField.value = `[WIP] ${titleField.value}`;
-    return;
-  }
-
   if (message.mode === 'qa') {
     titleField.value = `${titleField.value} - QA`;
     return;

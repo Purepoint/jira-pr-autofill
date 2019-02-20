@@ -6,7 +6,7 @@
     "storage",
     "<all_urls>"
   ],
-  "version": "0.5",
+  "version": "0.6",
   "icons": {
     "16": "icon16.png",
     "48": "icon48.png",
@@ -41,13 +41,7 @@
       "suggested_key": {
         "default": "Alt+Q"
       },
-      "description": "Add QA suffix"
-    },
-    "wip": {
-      "suggested_key": {
-        "default": "Alt+W"
-      },
-      "description": "Prefix title with [WIP]"
+      "description": "Add QA suffix to title"
     }
   }
 }
