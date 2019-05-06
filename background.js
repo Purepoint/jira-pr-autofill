@@ -23,7 +23,26 @@ chrome.pageAction.onClicked.addListener(function(tab) {
 });
 
 chrome.commands.onCommand.addListener(function(command) {
-  chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+  chrome.tabs.query({ active: true, currentWindow: true }, function(tabs) {
     chrome.tabs.sendMessage(tabs[0].id, { mode: command });
   });
+});
+
+chrome.runtime.onMessage.addListener(function(request, _sender, sendResponse) {
+  if (request.contentScriptQuery === 'card') {
+    chrome.storage.sync.get('url', function(options) {
+      const cardUrl = `${options.url}/browse/${request.cardId}`;
+      fetch(cardUrl)
+        .then(function(response) {
+          return response.text();
+        })
+        .then(function(text) {
+          sendResponse({ cardUrl: cardUrl, text: text });
+        })
+        .catch(function(error) {
+          console.log('Request failed', error);
+        });
+    });
+    return true;
+  }
 });
